@@ -6,7 +6,7 @@ import App from "./App";
 const el = document.getElementById('root');
 // tell react to take control of that element
 const root = ReactDom.createRoot(el);
-//const root = createRoot(el);
+
 //create a component
 
 //show the component on the screen
