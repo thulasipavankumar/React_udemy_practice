@@ -14,7 +14,7 @@ e.g.
 ```
 
 ### Examples of JSX
-https://jsx-notes.vercel.app/
+`https://jsx-notes.vercel.app/`
 
 ###  Components usage
  - create a new file (File name should be capital letter)
@@ -33,3 +33,8 @@ https://jsx-notes.vercel.app/
  - react collects the attributes and puts them in an object
  - props object shows up as the first argument to the child component function
  - we can use the props however we wish 
+
+  ### [bulma](https://bulma.io/documentation/components/) css for styling 
+
+ ### css styling
+  - . (dot) means all the elments with that class name e.g.:-  .card{}

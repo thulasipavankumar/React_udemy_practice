@@ -1,8 +1,18 @@
 const Card = ({title,imgUrl}) => {
     return (
-    <div> 
-        <h3>{title}</h3>
-        <img src={imgUrl} width={50} height={50}/>
+    <div className="card"> 
+    <div className="card-image">
+        <figure className="image is-1by1">
+        <img src={imgUrl}  alt="logo"/>
+        </figure>
+    </div >
+    <div className="card-content"> 
+    <div className="media-content"> 
+    <p className="title is-4">{title}</p>
+    </div>
+    </div>
+        
+        
     </div>
     );
 }
