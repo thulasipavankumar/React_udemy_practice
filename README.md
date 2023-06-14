@@ -37,4 +37,16 @@ e.g.
   ### [bulma](https://bulma.io/documentation/components/) css for styling 
 
  ### css styling
-  - . (dot) means all the elments with that class name e.g.:-  .card{}
+  - . (dot) means all the elments with that class name 
+
+### Event  
+`(google and add the info here)`
+ - Event is a action we are looking for from the user e.g.  button click,element drag
+
+ ### State
+`(google and add the info here)`
+ - state system is to update content after the event e.g. update the count of items in cart
+ - date that changes as the user interacts with our app
+ - when this data changes , react will update content on the screen automatically
+
+
