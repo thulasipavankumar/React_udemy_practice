@@ -49,4 +49,13 @@ e.g.
  - date that changes as the user interacts with our app
  - when this data changes , react will update content on the screen automatically
 
+### Handle inputs in React
+ - create a new piece of state
+
+### Best Practises
+ - Sibiling components **should not directly communicate**
+ - To share information b/w siblings,involve parent 
+
+
+### keys in React
 

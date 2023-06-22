@@ -2,6 +2,7 @@
 import React  from "react";
 import  ReactDom  from "react-dom/client";
 import App from "./App";
+//searchImages();
 // get a reference to the div with id root
 const el = document.getElementById('root');
 // tell react to take control of that element
