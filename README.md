@@ -57,6 +57,7 @@ e.g.
   name: 'apple',
 });
 
+// good trick to update just one property in an object
 const changeColor = (newColor) => {
   const updatedFruit = {
     ...fruit,
@@ -78,4 +79,7 @@ const changeColor = (newColor) => {
 ### keys in React
 
 ### context 
+
+###  form tag - for capturing submit/enter events
+- form tag will call POST onSubmit to prevent it use event.preventDefault();
 

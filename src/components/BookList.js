@@ -1,8 +1,8 @@
 import BookShow from "./BookShow"
-const BookList = ({ books ,onDelete}) => {
+const BookList = ({ books ,onDelete,onEdit}) => {
     const displayBooks = () => {
         return books.map((eachBook) => {
-            return (<BookShow book={eachBook} key={eachBook.id} className="book-show" onDelete={onDelete}></BookShow>)
+            return (<BookShow book={eachBook} key={eachBook.id} className="book-show" onDelete={onDelete} onEdit={onEdit}></BookShow>)
         })
     }
     return (
