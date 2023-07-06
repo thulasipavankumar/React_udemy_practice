@@ -1,7 +1,11 @@
 // import react and ReactDOm libraries
+
 import React  from "react";
 import  ReactDom  from "react-dom/client";
+import './index.css'
 import App from "./App";
+import 'bulma/css/bulma.min.css';
+
 //searchImages();
 // get a reference to the div with id root
 const el = document.getElementById('root');

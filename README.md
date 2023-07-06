@@ -48,6 +48,25 @@ e.g.
  - state system is to update content after the event e.g. update the count of items in cart
  - date that changes as the user interacts with our app
  - when this data changes , react will update content on the screen automatically
+ - when state is updated => Rerender the component it is defined in + all the child components as well 
+
+### modifying object properties for the state
+```javascript
+ const [fruit, setFruit] = useState({
+  color: 'red',
+  name: 'apple',
+});
+
+// good trick to update just one property in an object
+const changeColor = (newColor) => {
+  const updatedFruit = {
+    ...fruit,
+    color: newColor,
+  };
+
+  setFruit(updatedFruit);
+};
+```
 
 ### Handle inputs in React
  - create a new piece of state
@@ -58,4 +77,9 @@ e.g.
 
 
 ### keys in React
+
+### context 
+
+###  form tag - for capturing submit/enter events
+- form tag will call POST onSubmit to prevent it use event.preventDefault();
 
