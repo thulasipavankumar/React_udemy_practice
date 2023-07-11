@@ -83,3 +83,5 @@ const changeColor = (newColor) => {
 ###  form tag - for capturing submit/enter events
 - form tag will call POST onSubmit to prevent it use event.preventDefault();
 
+### useEffect 
+- 
