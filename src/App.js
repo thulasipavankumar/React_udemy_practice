@@ -2,20 +2,28 @@ import React from "react"
 import { useState } from "react"
 import BookList from "./components/BookList"
 import BookCreate from "./components/BookCreate"
+import axios from "axios"
 const App = () => {
 
     const [books, setBooks] = useState([])
     const deleteBookById = (id) => {
         setBooks(books.filter((book) => book.id !== id))
     }
-    const createBook = (title) => {
-        const updatedBooks = [...books, { id: Math.round(Math.random() * 999), title }]
+    const fetchBooks = async () => {
+        const response = await axios.get('http://localhost:3001/books')
+        setBooks(response.data)
+    }
+    const createBook = async (title) => {
+
+        const response = await axios.post('http://localhost:3001/books', {
+            title,
+        })
+        const updatedBooks = [...books, response.data]
 
         setBooks(updatedBooks)
-        console.log(`provided title is ${title} ${books.length}`)
     }
-    const editBookById = (id,newtitle) => {
-        setBooks(books.map(book=>book.id===id?{...book,title:newtitle}:book))
+    const editBookById = (id, newtitle) => {
+        setBooks(books.map(book => book.id === id ? { ...book, title: newtitle } : book))
     }
     return (
         <div className="app">
