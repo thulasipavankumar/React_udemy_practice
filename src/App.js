@@ -1,5 +1,5 @@
 import React from "react"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import BookList from "./components/BookList"
 import BookCreate from "./components/BookCreate"
 import axios from "axios"
@@ -22,6 +22,9 @@ const App = () => {
 
         setBooks(updatedBooks)
     }
+    useEffect(()=>{
+        fetchBooks();
+    },[])
     const editBookById = (id, newtitle) => {
         setBooks(books.map(book => book.id === id ? { ...book, title: newtitle } : book))
     }
