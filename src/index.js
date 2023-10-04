@@ -5,6 +5,7 @@ import  ReactDom  from "react-dom/client";
 import './index.css'
 import App from "./App";
 import 'bulma/css/bulma.min.css';
+import {Provider} from './context/books'
 
 //searchImages();
 // get a reference to the div with id root
@@ -15,6 +16,6 @@ const root = ReactDom.createRoot(el);
 //create a component
 
 //show the component on the screen
-root.render(<><App /></>);
+root.render(<Provider><App /></Provider>);
 
 

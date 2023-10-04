@@ -1,22 +1,24 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import BookEdit from "./BookEdit"
+import BooksContext from "../context/books"
 
-const BookShow = ({book,onDelete,onEdit}) => {
+const BookShow = ({book}) => {
     const [showEdit,setEdit]=useState(false)
+    const {deleteBookById} = useContext(BooksContext)
     const handleDeleteClick = () => {
-        onDelete(book.id)
+        deleteBookById(book.id)
     }
     
     const editBook = () => {
         setEdit(!showEdit);
     }
-    const handleSubmit = (id,newTitle) =>{
+    const handleSubmit = () =>{
         setEdit(false); // after editing and pressing enter , the bookedit component should not be shown any more
-        onEdit(id,newTitle)
+        
     }
     let content = book.title
     if(showEdit){
-        content=<BookEdit book={book} onEdit={handleSubmit}></BookEdit>
+        content=<BookEdit book={book} onSubmit={handleSubmit}></BookEdit>
     }
     return (
         <div className="book-show">
