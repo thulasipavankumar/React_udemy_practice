@@ -6,7 +6,8 @@ import axios from "axios"
 const App = () => {
 
     const [books, setBooks] = useState([])
-    const deleteBookById = (id) => {
+    const deleteBookById = async (id) => {
+        await axios.delete(`http://localhost:3001/books/${id}`)
         setBooks(books.filter((book) => book.id !== id))
     }
     const fetchBooks = async () => {
@@ -25,8 +26,18 @@ const App = () => {
     useEffect(()=>{
         fetchBooks();
     },[])
-    const editBookById = (id, newtitle) => {
-        setBooks(books.map(book => book.id === id ? { ...book, title: newtitle } : book))
+    const editBookById = async (id, newtitle) => {
+        const responce = await axios.put(`http://localhost:3001/books/${id}`,{
+            title:newtitle
+        })
+        console.log(responce)
+        const updatedBooks = books.map(book=>{
+            if (book.id === id){
+                return  { ...book, ...responce.data }
+            }
+            return book
+        })
+        setBooks(updatedBooks);
     }
     return (
         <div className="app">
