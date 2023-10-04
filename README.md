@@ -103,4 +103,12 @@ useEffect(()=>{
 ```
 
 ### useContext
-- 
+- useContext is a React Hook that lets you read and subscribe to context from your component.
+```js
+const value = useContext(SomeContext)
+```
+
+
+Note :
+
+- Application state and Component state (google and find out)

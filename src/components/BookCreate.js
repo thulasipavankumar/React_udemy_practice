@@ -1,12 +1,14 @@
 import { useState } from "react"
-const BookCreate = ({ onCreate }) => {
+import useBooksContext from "../hooks/use-books-contexts";
+const BookCreate = ( ) => {
+    const {createBook} = useBooksContext()
     const [title, setTitle] = useState('');
     const handleChange = (event) => {
         setTitle(event.target.value)
     }
     const handleSubmit = (event) => {
         event.preventDefault();
-        onCreate(title);
+        createBook(title);
         setTitle('') //empty out the text field ,once the user submit 
     }
     return (
