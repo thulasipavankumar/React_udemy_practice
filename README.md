@@ -83,3 +83,24 @@ const changeColor = (newColor) => {
 ###  form tag - for capturing submit/enter events
 - form tag will call POST onSubmit to prevent it use event.preventDefault();
 
+### useEffect 
+- syntaxt is useEffect(function,[counter])
+Bellow are some example for the useEffect
+```js
+useEffect(()=>{
+  callApi()
+},[])   //  called after 1st render and never call again
+```
+```js
+useEffect(()=>{
+  callApi()
+})   //  called after 1st render and called after every rerender
+```
+```js
+useEffect(()=>{
+  callApi()
+},[counter])   //  called after 1st render and called after  rerender if counter vairable is changes
+```
+
+### useContext
+- 
