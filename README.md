@@ -101,7 +101,7 @@ useEffect(()=>{
   callApi()
 },[counter])   //  called after 1st render and called after  rerender if counter vairable is changes
 ```
-
+**Important**: read about cleanups in useEffect [here](https://hackernoon.com/cleanup-functions-in-reacts-useeffect-hook-explained)
 ### useContext
 - useContext is a React Hook that lets you read and subscribe to context from your component.
 ```js
