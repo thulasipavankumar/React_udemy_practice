@@ -101,6 +101,25 @@ useEffect(()=>{
   callApi()
 },[counter])   //  called after 1st render and called after  rerender if counter vairable is changes
 ```
+
+### children prop
+
+- these are passed down to the component as children pop and can be use as `children` in the component
+```
+<App>
+  <Button>Click me!</Button>
+</App>
+
+Buttons.js
+---
+function Button({children}){
+  return <button>{children}</button>
+}
+```
+### react-icons
+use can also leverage the icons from reacat-icons library for pre-built icons 
+
+
 **Important**: read about cleanups in useEffect [here](https://hackernoon.com/cleanup-functions-in-reacts-useeffect-hook-explained)
 ### useContext
 - useContext is a React Hook that lets you read and subscribe to context from your component.
